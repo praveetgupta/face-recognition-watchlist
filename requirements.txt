@@ -1,2 +1,18 @@
 # Python dependencies for face-recognition-watchlist.
 # Versions are pinned per stage as each module is implemented.
+
+# --- Stage: detection (src/detector.py) ---
+# Core array + video I/O.
+numpy==1.26.4
+opencv-python==4.10.0.84
+# Primary detector: RetinaFace (serengil/retina-face, TensorFlow-based).
+# Import name: `retinaface`. Pulls in TensorFlow; has no torch dependency, so
+# it coexists with the torch-based MTCNN fallback below.
+retina-face==0.0.17
+tensorflow==2.16.2
+tf-keras==2.16.0
+# Fallback detector: MTCNN via facenet-pytorch (PyTorch). If you need a CUDA
+# build, install matching torch/torchvision wheels for your platform instead.
+torch==2.2.2
+torchvision==0.17.2
+facenet-pytorch==2.5.3
