@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Editor / local tool settings
+.claude/
+
+# Python virtual environment
+venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Downloaded model weights
+*.pt
+*.pth
+*.onnx
+
+# Enrolled face images (consented data — never commit to a public repo)
+# Keep the folder, ignore its contents.
+data/enrolled/*
+!data/enrolled/.gitkeep
